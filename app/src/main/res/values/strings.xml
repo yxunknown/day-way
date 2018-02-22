@@ -7,4 +7,21 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <string name="test">Since the introduction of AppBar in 2015, Android developers have spent lots of time styling and modifying it, making beautiful and unique apps. The ways of modifying Toolbar and flexible area beneath it are quite impressive. Yet, still the entry threshold is quite high for those who want to make their first steps in Material design world.
+
+Partly, this is because of an incomplete documentation and the lack of diverse examples. I, myself struggled to make the layout I wanted and as easy as it sounds – to make it scroll the way I want to. This was the moment I decided to write this blog post, so it helps others 🙂
+
+Maybe you want to scroll a Toolbar, so it hides completely and the only thing visible is the text? Or expand and collapse an image below the Toolbar? Or, doesn’t matter if the user is on the bottom of the layout, – you want to show him a Toolbar immediately on a scroll up action (there is a description of various scrolling techniques here). All of this is possible and easy to do with scroll flags!
+
+
+Why do you need those flags in the first place? Well, when you want to have expandable Toolbar, Floating Action Button and a content to scroll over, the best option would be to put them into CoordinatorLayout and use its facilities in order to customize the behavior of each of those components. CoordinatorLayout bounds the behavior of a few views together. It makes them work as a whole – smooth and natural. You just need to put Toolbar into the AppBarLayout, which is a special version of a LinearLayout with a scrolling gestures, and put a content into NestedScrollView which then needs to have a behavior flag – app:layout_behavior in order to notify AppBarLayout when a scroll event occurs, so they could work together. This is very nicely described in here.
+
+In case you’ve created a layout and haven’t specified app:layout_scrollFlags, Toolbar or whatever is inside AppBarLayout, will statically remain on top, always in an expanded state. If this is your intended behavior, then leave it as it is. If not, welcome to the rest of the blog post 😉
+
+If you want to jump right into the source code, please check it out on the GitHub !
+
+And so, I will discuss app:layout_scrollFlags attribute from AppBarLayout.LayoutParams. This attribute is responsible for a scrolling behavior of AppBarLayout and its children. You can apply it directly to AppBarLayout or on the inside views, in the xml layout of your AppCompatActivity. It has to be an instance of AppCompatActivity if you want to use AppBar features. Also, the design library must be included in Gradle dependencies, like so: implementation 'com.android.support:design:26.1.0'
+
+Basically, app:layout_scrollFlags attribute must have one of the 5 values (or a few of them combined). In my examples I use a Toolbar with action items, so my explanations are based on it.</string>
 </resources>

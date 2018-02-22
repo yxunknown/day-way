@@ -4,9 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.baidu.location.BDLocation;
 import com.baidu.location.LocationClient;
-import com.baidu.location.a;
 import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.MapView;
 

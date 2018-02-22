@@ -6,20 +6,91 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:theme="@style/AppTheme"
     tools:openDrawer="start">
 
-    <include
-        layout="@layout/app_bar_main2"
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <android.support.design.widget.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_main2"
-        app:menu="@menu/activity_main2_drawer" />
+        android:orientation="vertical">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="dayway"
+                app:titleTextColor="#FFF"/>
+        </android.support.design.widget.AppBarLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/points"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="23"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/distance"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="23"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:id="@+id/start"
+                    android:text="开始"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:id="@+id/preview"
+                    android:text="开始"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical"-->
+    <!--android:background="#FFF"-->
+    <!--android:layout_gravity="start">-->
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:background="?attr/selectableItemBackground"-->
+    <!--android:textSize="18sp"-->
+    <!--android:clickable="true"-->
+    <!--android:layout_gravity="start|center_vertical"-->
+    <!--android:paddingStart="10dp"-->
+    <!--android:text="dasdas"/>-->
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:text="dasdas"/>-->
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:text="dasdas"/>-->
+
+    <!--</LinearLayout>-->
+
 
 </android.support.v4.widget.DrawerLayout>

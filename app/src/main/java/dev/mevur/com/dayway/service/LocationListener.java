@@ -3,12 +3,11 @@ package dev.mevur.com.dayway.service;
 import android.content.Context;
 import android.util.Log;
 
+import com.baidu.location.BDAbstractLocationListener;
 import com.baidu.location.BDLocation;
-import com.baidu.location.a;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.SimpleFormatter;
 
 import dev.mevur.com.dayway.database.DayWayDB;
 import dev.mevur.com.dayway.entity.Location;
@@ -17,7 +16,7 @@ import dev.mevur.com.dayway.entity.Location;
  * Created by chengjiayi on 18/2/16.
  */
 
-public class LocationListener extends a {
+public class LocationListener extends BDAbstractLocationListener {
 
     private Context context;
     private DayWayDB db;
